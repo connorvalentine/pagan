@@ -1,5 +1,9 @@
 # -*- coding: latin-1 -*-
-import generator
+try:
+    from pagan import generator
+except:
+    import generator
+    
 import os
 
 
@@ -77,3 +81,4 @@ class Avatar():
         # FIXIT: filepath without SUFFIX, print writes false filename
         print ('Saving: %s' % filepath)
         self.img.save(filepath, extension.upper())
+
